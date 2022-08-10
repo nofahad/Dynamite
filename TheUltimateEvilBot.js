@@ -57,9 +57,7 @@ class Bot {
         // }
         
     }
-    else {
-        return "W" 
-    }
+    
 }
 }
 

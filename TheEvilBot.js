@@ -6,7 +6,7 @@ class Bot {
             
             if(gamestate.rounds.length === 0){
                 this.score = 0;
-                
+
                 this.score+=1;
                 this.Dcount = 0;
                 return 'D';
@@ -41,3 +41,6 @@ class Bot {
     }
 }
 module.exports = new Bot();
+
+
+
