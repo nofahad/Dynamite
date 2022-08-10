@@ -20,7 +20,7 @@ class Bot {
             
         }else if (this.Dcount === 100){
             this.previousMoves = []
-            for (let i = 0; i < gamestate.rounds.length[100]; i++){
+            for (let i = 0; i < 100; i++){
                this.previousMoves.push(gamestate.rounds[i].p2)
             }
             function mostCommon(arr){
@@ -31,13 +31,26 @@ class Bot {
             }
             if (mostCommon(this.previousMoves) === "S"){
             return "R"
-        } if (mostCommon(this.previousMoves) === "P"){
+            } if (mostCommon(this.previousMoves) === "P"){
             return "S"
-        } if (mostCommon(this.previousMoves) === "R"){
+            } if (mostCommon(this.previousMoves) === "R"){
             return "P"
-        } else {
+            } if (mostCommon(this.previousMoves) === "D"){
             return "W"
-        }
+            } else{
+             const move = Math.floor(Math.random()*3);
+                switch(move){
+                  case 2:
+                        return 'R';
+                        break;
+                    case 1:
+                        return 'P';
+                        break;
+                    case 0:
+                        return 'S';
+                        break;
+                }
+            }
 
         // }else if (gamestate.rounds.length >= 101){
             
