@@ -1,7 +1,11 @@
 class Bot {
-    Dcount = 0   
+       
     makeMove(gamestate) {
         
+        if(gamestate.rounds.length === 0){
+            this.Dcount = 0;
+            
+        }
         if(this.Dcount < 100){
             
             if(gamestate.rounds.length === 0){
